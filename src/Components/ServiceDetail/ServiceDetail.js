@@ -11,14 +11,14 @@ const ServeiceDetail = () => {
     const[details,setDetails]=useState([]);
     
     useEffect(()=>{
-       fetch(`http://localhost:5000/services/${serviceId}`)
+       fetch(`https://eerie-phantom-27491.herokuapp.com/services/${serviceId}`)
        .then(res=>res.json())
        .then(data=>setDetails(data))
     },[])
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        axios.post('http://localhost:5000/orders',data)
+        axios.post('https://eerie-phantom-27491.herokuapp.com/orders',data)
         .then(res=>{
           console.log(res)
             if(res.data.insertedId){

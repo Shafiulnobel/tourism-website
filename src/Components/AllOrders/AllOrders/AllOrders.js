@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Col, Container, Row, Table } from 'react-bootstrap';
-import { useParams } from 'react-router';
-import SingleOrder from '../SingleOrder/SingleOrder';
+import { Card, Col, Container, Row} from 'react-bootstrap';
+
 
 const AllOrders = () => {
   const[orders,setOrders]=useState([]);
   const[isUpdate,setIsUpdate]=useState(null);
   useEffect(()=>{
-    fetch('http://localhost:5000/orders')
+    fetch('https://eerie-phantom-27491.herokuapp.com/orders')
     .then(res=>res.json())
     .then(data=>setOrders(data))
   },[isUpdate])
@@ -15,7 +14,7 @@ const AllOrders = () => {
   const handleDeleteOrder= id =>{
     const proceed=window.confirm('Are you sure,you want to delete');
     if(proceed){
-      const url=`http://localhost:5000/orders/${id}`
+      const url=`https://eerie-phantom-27491.herokuapp.com/orders/${id}`
       fetch(url,{
           method:'DELETE',
 
@@ -33,7 +32,7 @@ const AllOrders = () => {
 
   const handleUpdate = id =>{
     
-    const url=`http://localhost:5000/orders/${id}`
+    const url=`https://eerie-phantom-27491.herokuapp.com/orders/${id}`
     fetch(url)
     .then(res=>res.json())
     .then(data=>{

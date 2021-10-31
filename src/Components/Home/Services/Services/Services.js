@@ -7,7 +7,7 @@ const Services = () => {
     const [services,setServices] =useState([]);
     useEffect(()=>{
       // <Spinner animation="border" />
-        fetch('http://localhost:5000/services')
+        fetch('https://eerie-phantom-27491.herokuapp.com/services')
         .then(res=>res.json())
         .then(data=>setServices(data))
        

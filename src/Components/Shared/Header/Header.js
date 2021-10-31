@@ -25,7 +25,7 @@ const Header = () => {
          fontWeight: "bold",
           color: "salmon"
          }} 
-       style={{textDecoration:'none',color:'white'}} to={`/userOrders/${user?.email}`}>My Orders</NavLink>:
+       style={{textDecoration:'none',color:'white'}} to="/userOrders">My Orders</NavLink>:
       ''
       }
         { user?.email?
