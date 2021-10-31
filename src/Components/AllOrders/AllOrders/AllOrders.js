@@ -5,11 +5,12 @@ import SingleOrder from '../SingleOrder/SingleOrder';
 
 const AllOrders = () => {
   const[orders,setOrders]=useState([]);
+  const[isUpdate,setIsUpdate]=useState(null);
   useEffect(()=>{
     fetch('http://localhost:5000/orders')
     .then(res=>res.json())
     .then(data=>setOrders(data))
-  },[])
+  },[isUpdate])
   
   const handleDeleteOrder= id =>{
     const proceed=window.confirm('Are you sure,you want to delete');
@@ -38,6 +39,9 @@ const AllOrders = () => {
     .then(data=>{
       if(data.matchedCount>0){
         alert('approved successfully!')
+        setIsUpdate(true)
+      }else{
+        setIsUpdate(false)
       }
        console.log(data)
     });

@@ -29,8 +29,7 @@ const ServeiceDetail = () => {
     };
     return (
         <div className="style">
-         
-    
+ 
       <Container className="my-5">
             <Card>
           <Row className="d-flex align-items-center" xs={1} md={2} lg={2}>

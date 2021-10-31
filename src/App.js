@@ -37,7 +37,7 @@ function App() {
         <Route path="/login">
             <Login />
           </Route>
-        <PrivateRoute path="/userOrders">
+        <PrivateRoute path="/userOrders/:mail">
             <Orders />
           </PrivateRoute>
         <PrivateRoute path="/allOrders">
