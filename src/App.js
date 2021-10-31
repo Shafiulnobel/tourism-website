@@ -1,10 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Home from './Components/Home/Home/Home';
 
@@ -12,7 +10,6 @@ import Footer from './Components/Shared/Footer/Footer';
 import Header from './Components/Shared/Header/Header';
 import NotFound from './Components/NotFound/NotFound';
 import Login from './Components/Login/Login/Login';
-import Registration from './Components/Login/Registration/Registration';
 import AuthProvider from './Contexts/AuthProvider';
 import AddServices from './Components/AddServices/AddServices';
 import Orders from './Components/Orders/Orders';
