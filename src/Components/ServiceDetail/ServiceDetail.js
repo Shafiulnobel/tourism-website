@@ -44,7 +44,7 @@ const ServeiceDetail = () => {
       </div>
         <div className="d-flex align-items-center">
         <p className="my-2 mx-2">Username</p>
-        {user?.displayName && <input readOnly={true} defaultValue={user?.displayName} {...register("username", { required: true, maxLength: 20 })} placeholder="username"/>}
+        {user?.displayName && <input readOnly={true} defaultValue={user?.displayName} {...register("username", { required: true})} placeholder="username"/>}
         </div>
         <div className="d-flex align-items-center">
         <p className="my-2 mx-2">Place</p>
