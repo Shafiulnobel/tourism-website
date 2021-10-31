@@ -19,6 +19,11 @@ const Services = () => {
              <h2 className="lg-txt">Choose The Package you Want!</h2>
             <Row xs={1} md={2} lg={3} className="g-4">
             {
+              services.length===0 ? 
+              <div className="d-flex justify-content-center">
+                <Spinner animation="border" />
+              </div>
+              :
               services.map(service=><Service
             service={service}
             key={service._id}

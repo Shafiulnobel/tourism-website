@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const Service = (props) => {
     const{_id,name,description,days,price,img}=props.service;
     return (
-        <div>
+    <div>
     <Col>
       <Card className="h-100">
         <Card.Img style={{width:'100%',height:'15rem'}} variant="top" src={img} />
