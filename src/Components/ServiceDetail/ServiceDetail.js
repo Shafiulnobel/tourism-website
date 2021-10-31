@@ -48,7 +48,7 @@ const ServeiceDetail = () => {
         </div>
         <div className="d-flex align-items-center">
         <p className="my-2 mx-2">Place</p>
-      {details?.name && <input readOnly={true} defaultValue={details?.name} {...register("name", { required: true, maxLength: 20 })} placeholder="service name"/>}
+      {details?.name && <input readOnly={true} defaultValue={details?.name} {...register("name", { required: true})} placeholder="service name"/>}
           </div>  
       <div className="d-flex align-items-center">
       <p className="my-2 mx-2">Details</p>
